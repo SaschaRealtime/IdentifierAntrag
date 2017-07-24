@@ -1,0 +1,125 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZIDENTIFIERODATA_SRV" xml:lang="de" sap:schema-version="1">
+            <EntityType Name="Antrag" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Antnr"/>
+                </Key>
+                <Property Name="Antnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Antragsnr" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Antart" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Antragsart" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Addrnumber" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Adressnummer" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vuname" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Vorlagebenutzer" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Uname" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Benutzername" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Name1" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Name" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Company" Type="Edm.String" MaxLength="42" sap:unicode="false" sap:label="Firma" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Abtei" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Abteilung" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Persnumber" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Personennummer" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Comm" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Kommunikationsart" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Consnum" Type="Edm.String" MaxLength="3" sap:unicode="false" sap:label="Laufende Nummer" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Cusage" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Verwendung" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Valto" Type="Edm.String" MaxLength="14" sap:unicode="false" sap:label="Gültig bis" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Function" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Funktion" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Kostl" Type="Edm.String" MaxLength="8" sap:unicode="false" sap:label="Kostenstelle" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tzone" Type="Edm.String" MaxLength="6" sap:unicode="false" sap:label="Zeitzone" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Roomnum" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Raumnummer" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Floor" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Stockwerk" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Building" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Gebäudekürzel" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="History" Type="Edm.String" MaxLength="70" sap:unicode="false" sap:label="Textname" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Xuaccnt" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Abrechnungsnr." sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ExitDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Austrittsdatum" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="EntryDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Eintrittsdatum" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Antdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Antragsdatum" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Xucatt" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Prüfkennzeichen" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Title" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Anrede" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TitleAca1" Type="Edm.String" MaxLength="4" sap:unicode="false" sap:label="Akadem. Titel" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NameLast" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Nachname" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="NameFirst" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Vorname" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Langu" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Sprache" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelNumber" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Telefon" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="MobNumber" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Mobiltelefon" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FaxNumber" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Fax" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SmtpAddr" Type="Edm.String" MaxLength="241" sap:unicode="false" sap:label="E-Mail-Adresse" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="TelExtens" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Nebenstelle" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="FaxExtens" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Nebenstelle" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Antragsstatus" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status2" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="Aktivitätsstatus" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ersteller" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Antragssteller" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Verantw" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Verantwortlicher" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usergroup" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Benutzergruppe" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Crdate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Erstellungsdat." sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Crtime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Erstellungszeit" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Referenz" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Referenz" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Auswahl" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Einstelliges Kennzeichen" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Memory" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Einstelliges Kennzeichen" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Tcomp" Type="Edm.Boolean" sap:unicode="false" sap:label="tech. abgeschlossen" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lkenz" Type="Edm.Boolean" sap:unicode="false" sap:label="Lösch-Kz." sap:sortable="false" sap:filterable="false"/>
+                <Property Name="WfNum" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Kennung" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bezei" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Bezeichnung" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bezei2" Type="Edm.String" MaxLength="40" sap:unicode="false" sap:label="Bezeichnung" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="AntragToSystems" Relationship="ZIDENTIFIERODATA_SRV.AntragToSystems" FromRole="FromRole_AntragToSystems" ToRole="ToRole_AntragToSystems"/>
+            </EntityType>
+            <EntityType Name="System" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Antnr"/>
+                    <PropertyRef Name="SystemId"/>
+                    <PropertyRef Name="SystemMandt"/>
+                </Key>
+                <Property Name="Antnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Antragsnr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SystemId" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="Name des Systems" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="SystemMandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Zielmandant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vuname" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Vorlagebenutzer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Bname" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Benutzer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gltgv" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Datum von" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Gltgb" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Datum bis" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Xuustyp" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Benutzertyp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Usertyp" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="ID Benutzertyp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Xustart" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Startmenü" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Spld" Type="Edm.String" MaxLength="30" sap:unicode="false" sap:label="Ausgabegerät" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Datfm" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Datumsdarstlg." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Spras" Type="Edm.String" MaxLength="2" sap:unicode="false" sap:label="Sprache" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Dcpfm" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Dezimaldarstellung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Kommentar" Type="Edm.String" MaxLength="20" sap:unicode="false" sap:label="char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Crico" Type="Edm.Boolean" sap:unicode="false" sap:label="Krit. Rollen-Kombi" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Version" Type="Edm.String" MaxLength="15" sap:unicode="false" sap:label="Prozessversion" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Stand" Type="Edm.String" MaxLength="10" sap:unicode="false" sap:label="Zähler Ergebnis" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Realized" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Realisiert" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RealizedDate" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Datum" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="RealizedTime" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Uhrzeit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangeRequestS" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Einstelliges Kennzeichen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ChangeRequestF" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Einstelliges Kennzeichen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Sperre" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Einstelliges Kennzeichen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Traffic" Type="Edm.String" MaxLength="1" sap:unicode="false" sap:label="Risikoklasse-ID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Class" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Gruppe (Logon)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Text" Type="Edm.String" MaxLength="60" sap:unicode="false" sap:label="Text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="AntragToSystems" sap:content-version="1">
+                <End Type="ZIDENTIFIERODATA_SRV.Antrag" Multiplicity="1" Role="FromRole_AntragToSystems"/>
+                <End Type="ZIDENTIFIERODATA_SRV.System" Multiplicity="*" Role="ToRole_AntragToSystems"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_AntragToSystems">
+                        <PropertyRef Name="Antnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_AntragToSystems">
+                        <PropertyRef Name="Antnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZIDENTIFIERODATA_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="AntragSet" EntityType="ZIDENTIFIERODATA_SRV.Antrag" sap:content-version="1"/>
+                <EntitySet Name="SystemSet" EntityType="ZIDENTIFIERODATA_SRV.System" sap:content-version="1"/>
+                <AssociationSet Name="AntragToSystemsSet" Association="ZIDENTIFIERODATA_SRV.AntragToSystems" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="AntragSet" Role="FromRole_AntragToSystems"/>
+                    <End EntitySet="SystemSet" Role="ToRole_AntragToSystems"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link
+                xmlns:atom="http://www.w3.org/2005/Atom" rel="self" href="https://s4launchpad-1610.movento.com:44310/sap/opu/odata/sap/ZIDENTIFIERODATA_SRV/$metadata"/>
+                <atom:link
+                    xmlns:atom="http://www.w3.org/2005/Atom" rel="latest-version" href="https://s4launchpad-1610.movento.com:44310/sap/opu/odata/sap/ZIDENTIFIERODATA_SRV/$metadata"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

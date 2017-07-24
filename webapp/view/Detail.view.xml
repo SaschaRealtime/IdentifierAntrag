@@ -1,0 +1,386 @@
+<mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:form="sap.ui.layout.form"
+	xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:layout="sap.ui.layout" controllerName="realtime.identifier.benutzerantrag.controller.Detail">
+	<semantic:DetailPage id="page" navButtonPress="onNavBack" showNavButton="{device>/system/phone}" title="{i18n>detailTitle}"
+		busy="{detailView>/busy}" busyIndicatorDelay="{detailView>/delay}">
+		<semantic:content>
+			<ObjectHeader id="objectHeader" title="{NameFirst} {NameLast}" intro="Antrag: {Antnr} Art: {Antart}">
+				<attributes>
+					<ObjectAttribute text="{device>/system/phone}" id="__attribute15"/>
+				</attributes>
+			</ObjectHeader>
+			<IconTabBar id="iconTabBar" class="sapUiResponsiveContentPadding">
+				<items>
+					<IconTabFilter id="iconTabBarFilter1" icon="sap-icon://hint" tooltip="{i18n>detailIconTabBarInfo}" text="Antragsdaten">
+						<content>
+							<form:Form editable="true" id="__form0">
+								<form:formContainers>
+									<form:FormContainer title="Antragsdaten" id="__container0">
+										<form:customData>
+											<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="false" id="__data42"/>
+										</form:customData>
+										<form:formElements>
+											<form:FormElement id="__element1">
+												<form:fields>
+													<Text text="{Antart}" id="__input1"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Antart/@sap:label}" id="__label1"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element2">
+												<form:fields>
+													<Text text="{Verantw}" id="__input2"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Verantw/@sap:label}" id="__label2"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element3">
+												<form:fields>
+													<Text text="{Usergroup}" id="__input3"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Usergroup/@sap:label}" id="__label3"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element4">
+												<form:fields>
+													<Text text="{EntryDate}" id="__picker0"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/EntryDate/@sap:label}" id="__label4"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element5">
+												<form:fields>
+													<Text text="{Referenz}" id="__input4"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Referenz/@sap:label}" id="__label5"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element6">
+												<form:fields>
+													<Text text="{Antnr}" id="__input5"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Antnr/@sap:label}" id="__label6"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element7">
+												<form:fields>
+													<Text text="{Antdate}" id="__picker1"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Antdate/@sap:label}" id="__label7"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element8">
+												<form:fields>
+													<Text text="{Ersteller}" id="__input6"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Ersteller/@sap:label}" id="__label8"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element9">
+												<form:fields>
+													<Text text="{Status}" id="__input7"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Status/@sap:label}" id="__label9"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element10">
+												<form:fields>
+													<Text text="{Status2}" id="__input8"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Status2/@sap:label}" id="__label10"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element11">
+												<form:fields>
+													<Text text="{NameFirst} {NameLast}" id="__input9"/>
+												</form:fields>
+												<form:label>
+													<Label text="Vollst. Name" id="__label11"/>
+												</form:label>
+											</form:FormElement>
+										</form:formElements>
+									</form:FormContainer>
+								</form:formContainers>
+								<form:layout>
+									<form:ResponsiveGridLayout id="__layout2"/>
+								</form:layout>
+								<form:customData>
+									<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="false" id="__data15"/>
+								</form:customData>
+							</form:Form>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator id="__separator1"/>
+					<IconTabFilter text="Allgemein" icon="sap-icon://task" id="__filter0">
+						<content>
+							<form:Form editable="false" id="__form1">
+								<form:formContainers>
+									<form:FormContainer title="Person" id="__container1" expandable="{= ${device>/system/phone} }">
+										<form:formElements>
+											<form:FormElement id="__element12">
+												<form:fields>
+													<Text text="{Title}" id="__input10"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Title/@sap:label}" id="__label12"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element13">
+												<form:fields>
+													<Text text="{TitleAca1}" id="__input11"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/TitleAca1/@sap:label}" id="__label13"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element14">
+												<form:fields>
+													<Text text="{NameLast}" id="__input12"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/NameLast/@sap:label}" id="__label14"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element15">
+												<form:fields>
+													<Text text="{NameFirst}" id="__input13"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/NameFirst/@sap:label}" id="__label15"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element16">
+												<form:fields>
+													<Text text="{Langu}" id="__input14"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Langu/@sap:label}" id="__label16"/>
+												</form:label>
+											</form:FormElement>
+										</form:formElements>
+										<form:customData>
+											<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="false" id="__data33"/>
+										</form:customData>
+									</form:FormContainer>
+									<form:FormContainer title="Firma" id="__container2" expandable="{= ${device>/system/phone} }">
+										<form:formElements>
+											<form:FormElement id="__element18">
+												<form:fields>
+													<Text text="{Company}" id="__input16"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Company/@sap:label}" id="__label18"/>
+												</form:label>
+											</form:FormElement>
+										</form:formElements>
+										<form:customData>
+											<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="false" id="__data119"/>
+										</form:customData>
+									</form:FormContainer>
+									<form:FormContainer title="Kommunikation" id="__container3" expandable="{= ${device>/system/phone} }">
+										<form:formElements>
+											<form:FormElement id="__element20">
+												<form:fields>
+													<Text text="{TelNumber}" id="__input18"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/TelNumber/@sap:label}" id="__label20"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element23">
+												<form:fields>
+													<Text text="{TelExtens}" id="__input21"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/TelExtens/@sap:label}" id="__label23"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element24">
+												<form:fields>
+													<Text text="{MobNumber}" id="__input22"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/MobNumber/@sap:label}" id="__label24"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element25">
+												<form:fields>
+													<Text text="{FaxNumber}" id="__input23"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/FaxNumber/@sap:label}" id="__label25"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element26">
+												<form:fields>
+													<Text text="{FaxExtens}" id="__input24"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/FaxExtens/@sap:label}" id="__label26"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element27">
+												<form:fields>
+													<Text text="{SmtpAddr}" id="__input25"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/SmtpAddr/@sap:label}" id="__label27"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element28">
+												<form:fields>
+													<Text text="{Comm}" id="__input26"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Comm/@sap:label}" id="__label28"/>
+												</form:label>
+											</form:FormElement>
+										</form:formElements>
+										<form:customData>
+											<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="false" id="__data111"/>
+										</form:customData>
+									</form:FormContainer>
+									<form:FormContainer title="Arbeitsplatz" id="__container4" expandable="{= ${device>/system/phone} }">
+										<form:customData>
+											<sap.ui.core:CustomData xmlns:sap.ui.core="sap.ui.core" key="w5g.dt.editable" value="false" id="__data88"/>
+										</form:customData>
+										<form:formElements>
+											<form:FormElement id="__element30">
+												<form:fields>
+													<Text text="{Abtei}" id="__text10"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Abtei/@sap:label}" id="__label30"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element31">
+												<form:fields>
+													<Text text="{Function}" id="__text11"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Function/@sap:label}" id="__label31"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element32">
+												<form:fields>
+													<Text text="{Roomnum}" id="__text12"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Roomnum/@sap:label}" id="__label32"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element33">
+												<form:fields>
+													<Text text="{Floor}" id="__text13"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Floor/@sap:label}" id="__label33"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element34">
+												<form:fields>
+													<Text text="{Building}" id="__text14"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Building/@sap:label}" id="__label34"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element35">
+												<form:fields>
+													<Text text="{Kostl}" id="__text15"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Kostl/@sap:label}" id="__label35"/>
+												</form:label>
+											</form:FormElement>
+											<form:FormElement id="__element36">
+												<form:fields>
+													<Text text="{Xuaccnt}" id="__text16"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Xuaccnt/@sap:label}" id="__label36"/>
+												</form:label>
+											</form:FormElement>
+										</form:formElements>
+									</form:FormContainer>
+								</form:formContainers>
+								<form:layout>
+									<form:ResponsiveGridLayout id="__layout0" columnsM="2"/>
+								</form:layout>
+							</form:Form>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator xmlns:mvc="sap.ui.core.mvc" xmlns:semantic="sap.m.semantic" xmlns:form="sap.ui.layout.form"
+						xmlns:footerbar="sap.ushell.ui.footerbar" xmlns:layout="sap.ui.layout" xmlns="sap.m" id="__separator1_copy"/>
+					<IconTabFilter id="iconTabBarFilter2" icon="sap-icon://it-system" tooltip="{i18n>detailIconTabBarAttachments}" text="Systeme"
+						count="{detailView>/systemsCount}">
+						<content>
+							<Table id="lineItemsList" width="auto" updateFinished="onListUpdateFinished" noDataText="{i18n>detailLineItemTableNoDataText}"
+								busyIndicatorDelay="{detailView>/lineItemTableDelay}" class="sapUiResponsiveMargin" items="{AntragToSystems}">
+								<headerToolbar>
+									<Toolbar>
+										<Title text="Systeme"/>
+									</Toolbar>
+								</headerToolbar>
+								<items>
+										<form:Form>
+											<form:formContainers>
+												<form:FormContainer>
+														<form:FormElement>
+												<form:fields>
+													<Text text="{Kostl}"/>
+												</form:fields>
+												<form:label>
+													<Label text="{/#Antrag/Kostl/@sap:label}" />
+												</form:label>
+											</form:FormElement>
+												</form:FormContainer>
+											</form:formContainers>
+										</form:Form>
+									<ObjectListItem type="Active" title="{SystemId}">
+										<attributes>
+											<ObjectAttribute text="attribute text" id="__attribute3"/>
+										</attributes>
+										<firstStatus>
+											<ObjectStatus text="first status text" id="__status6"/>
+										</firstStatus>
+										<secondStatus>
+											<ObjectStatus text="second status text" id="__status7"/>
+										</secondStatus>
+									</ObjectListItem>
+								</items>
+								<columns>
+									<Column>
+										<Text text="{i18n>detailLineItemTableIDColumn}"/>
+									</Column>
+									<Column minScreenWidth="Tablet" demandPopin="true" hAlign="Right">
+										<Text text="{i18n>detailLineItemTableUnitNumberColumn}"/>
+									</Column>
+								</columns>
+							</Table>
+						</content>
+					</IconTabFilter>
+					<IconTabSeparator id="__separator2"/>
+				</items>
+			</IconTabBar>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+		<semantic:shareInJamAction>
+			<semantic:ShareInJamAction id="shareInJam" visible="{FLP>/isShareInJamActive}" press="onShareInJamPress"/>
+		</semantic:shareInJamAction>
+		<semantic:saveAsTileAction>
+			<footerbar:AddBookmarkButton id="shareTile" title="{detailView>/saveAsTileTitle}"/>
+		</semantic:saveAsTileAction>
+	</semantic:DetailPage>
+</mvc:View>
